@@ -1,5 +1,5 @@
-# Vintage guestbook
-Node.js - Excerise (Building a guestbook with rest-router/mongoose/templates etc.)
+# Send Messages to dataBase
+Node.js - Excerise (Building a simple message-form using MongoDB, Express, Rest-router, Mongoose. Using classes and templates on frontend)
 
 ## Installation
 Clone or download the source files.
