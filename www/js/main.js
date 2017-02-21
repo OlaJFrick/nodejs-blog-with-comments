@@ -1,9 +1,7 @@
-// List ALL RestEntity classes here
+// The RestEntity classes here
 var Message = new RestEntity('message');
 
-
 (()=>{
-
 	$.loadTemplates([
 		'main-page',
 		'message-form',

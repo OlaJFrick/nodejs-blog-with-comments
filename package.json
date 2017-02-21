@@ -13,6 +13,7 @@
 		"gulp-clean-css": "*",
 		"gulp-less": "*",
 		"mongoose": "*",
-		"mongoosefromclass": "*"
+		"mongoosefromclass": "*",
+		"dateformat": "*"
 	}
 }
