@@ -5,6 +5,10 @@
           <strong>Success!</strong> You've posted a message
         </div>
 
+        <button class="btn btn-primary message-count" type="button">
+          Messages <span class="badge">${messagecount}</span>
+        </button>
+
         [repeat messages,message]
 
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">

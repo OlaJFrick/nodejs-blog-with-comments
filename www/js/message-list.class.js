@@ -6,7 +6,10 @@ class MessageList {
 
         function getMessages(messages, err) {
 
-        	$('.msg-list-content').template('message-list', { messages: messages});
+        	// count the length of messages
+        	let messagecount = $(messages).toArray().length;
+
+        	$('.msg-list-content').template('message-list', { messages: messages, messagecount: messagecount});
 
         	$('.alert-success').hide();
 
