@@ -17,6 +17,8 @@ mongoose.Promise = Promise;
 
 // Load classes, make them global and then convert selected ones to modules
 var classesToLoad = {
+	Restrouter: true,
+	Lesswatch: true,
 	Message: 'module'
 };
 
@@ -52,12 +54,12 @@ app.use((req, res, next)=>{
 
 
 // Create restroutes to selected classes/mongoose models
-// new Restrouter(app, Message);
+new Restrouter(app, Message);
 
 app.use(express.static('www'));
 
 // ?? start LessWatch
-// new Lesswatch();
+new Lesswatch();
 
 // Connect to mongoDB
 // and when that is done start the express server
