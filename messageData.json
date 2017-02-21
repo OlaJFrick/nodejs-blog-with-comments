@@ -2,19 +2,37 @@
 	{
 		"username": "Frank Ferrer",
 		"title": "Well Deserved",
-		"message": "I just want to wish you the best of luck. Take care. From LA",
-		"date": "Tuesday Feb 21 16:10"
+		"message": "A message is a discrete unit of communication intended by the source for consumption by some recipient or group of recipients. A message may be delivered by various means, including courier, telegraphy, carrier pigeon and electronic bus. A message can be the content of a broadcast. An interactive exchange of messages forms a conversation.",
+		"formatdate": "Tue Feb 21 16:10",
+		"fulldate": "2017-02-21T16:10:59.493Z"
+
 	},
 	{
 		"username": "Dr Mary Kay",
 		"title": "Possibly impossible",
 		"message": "When it comes to creating professional, attractive, and effective websites, there is no company that can surpass Web Design Enterprise.  Thanks to their talent, our site has taken off in the search engines like a rocket.  In this day and age, it is impossible to get ahead as a business without the support of gurus like Web Design Enterprise standing behind you.",
-		"date": "Monday Feb 20 12:10"
+		"formatdate": "Mon Jan 11 12:10",
+		"fulldate": "2017-01-11T11:45:59.493Z"
 	},
 	{
 		"username": "Bob Mainheim",
 		"title": "Thank you Uncle Sam!",
 		"message": "I couldn't be happier with my choice of using Web Design Enterprise for my new website. Their team were easy to work with and helped me make a terrific website in a short amount of time.",
-		"date": "Sunday Feb 19 11:10"
+		"formatdate": "Sun Feb 19 11:10",
+		"fulldate": "2017-02-19T11:45:59.493Z"
+	},
+	{
+		"username": "Grant Lee Philips",
+		"title": "Thank you Uncle Sam!",
+		"message": "There are two main senses of the word message in computing: messages between the human users of computer systems that are delivered by those computer systems, and messages passed between programs or between components of a single program, for their own purposes.",
+		"formatdate": "Sun Feb 10 11:10",
+		"fulldate": "2017-02-10T11:10:59.493Z"
+	},
+	{
+		"username": "Bob Hope",
+		"title": "Big up",
+		"message": "Message passing is a form of communication used in concurrent and parallel computing, object-oriented programming, and interprocess communication, where communication is made by sending messages to recipients. In a related use of this sense of a message, in object-oriented programming languages such as Smalltalk or Java, a message is sent to an object, specifying a request for action.",
+		"formatdate": "Sun Feb 10 11:10",
+		"fulldate": "2017-02-10T11:10:59.493Z"
 	}
 ]

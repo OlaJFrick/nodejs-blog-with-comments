@@ -6,10 +6,11 @@ body {
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-
  }
 
- .box-shadow { box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); };
+/////////////////////////////////////////////////////////////////////////////////////
+
+.box-shadow { box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); };
 
 @custom-color-main: #9E9E9E;
 @custom-color-50: #FAFAFA;
@@ -23,6 +24,7 @@ body {
 @custom-color-800:#424242;
 @custom-color-900:#212121;
 
+/////////////////////////////////////////////////////////////////////////////////////
 
 .main-page-content {
 
@@ -41,34 +43,28 @@ body {
 		border-radius: 4px;
 		padding: 20px;
 		background: @custom-color-900;
-		// color: @custom-color-800;
-		// opacity: 0.9;
+		opacity: 0.8;
 	}
-	
 }
 
 .msg-list-content {
 
 	.list-group {
 		
-
-
 		.list-group-item {
+			.box-shadow;
 			border: 0;
 			background: @custom-color-900;
 			cursor: default;
 			margin-bottom: 10px;
-			.box-shadow;
-			opacity: 0.8;
+			padding: 30px;
 
 			.d-flex {
 
 					h5 {
-
 						font-size: 16px;
 						margin-bottom: 4px;
 						color: @custom-color-50;
-
 					}
 
 					small {

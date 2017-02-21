@@ -19,6 +19,7 @@ mongoose.Promise = Promise;
 var classesToLoad = {
 	Restrouter: true,
 	Lesswatch: true,
+	MsgTest: true,
 	Message: 'module'
 };
 
@@ -33,6 +34,9 @@ for(let className in classesToLoad) {
 	}
 }
 
+// Run the test data generator
+new MsgTest();
+
 // Create a new express server, store in the variable app
 var app = express();
 
@@ -40,11 +44,10 @@ var app = express();
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({ extended: false }));
 
-
-// ?? 
+// Unnessesary??
 app.use(compression());
 
-// ?? Never cache request starting with "/rest/"
+// Never cache request starting with "/rest/" ??
 app.use((req, res, next)=>{
 	if(req.url.indexOf('/rest/') >= 0) {
 		res.set("Cache-Control", "no-store, must-revalidate");
@@ -52,13 +55,12 @@ app.use((req, res, next)=>{
 	next();
 });
 
-
 // Create restroutes to selected classes/mongoose models
 new Restrouter(app, Message);
 
 app.use(express.static('www'));
 
-// ?? start LessWatch
+// start LessWatch 
 new Lesswatch();
 
 // Connect to mongoDB
@@ -79,7 +81,7 @@ function onceConnected() {
 }
 
 function createDefaultMessages() {
-		messageData.forEach(function(data) {
-			new Message(data).save();
-		});
-	}
+    messageData.forEach(function(data) {
+        new Message(data).save();
+    });
+}

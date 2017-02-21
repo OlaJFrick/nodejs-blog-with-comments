@@ -4,14 +4,14 @@ var Message = new RestEntity('message');
 (()=>{
 	$.loadTemplates([
 		'main-page',
-		'message-form',
-		'message-list'
+		'message-list',
+		'message-form'
 	], onTemplatesLoaded);
 
 	function onTemplatesLoaded() {
 		new MainPage();
-		new MessageForm();
 		new MessageList();
+		new MessageForm();
 	}
 
 })();

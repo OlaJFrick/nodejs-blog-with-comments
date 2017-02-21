@@ -4,22 +4,37 @@ class MessageForm {
 
     	$('.msg-form-content').template('message-form', {});
 
-    	$('.msg-form-content').on('click', '.msg-submitter', function() {
+        // Animate Check-box when checked. 
+
+        $('body').on('click', '.form-check-input', function(){
+            $(this).toggleClass('animated jello');
+        });
+
+
+    	$('.msg-form-content').on('click', '.msg-submitter', function(event) {
+            event.preventDefault();
     	    var title = $('.msg-title-input').val();
     	    var message = $('.msg-message-input').val();
     	    var username = $('.msg-name-input').val(); 
     	    var date = formatDate();
+            var fulldate = new Date();
     	   
     	    if ($('.form-check-input').is(':checked')) {
-    	        // alert('Thank you for your message ' + username + '!');
 
     	        Message.create({
     	            username: username,
     	            title: title,
     	            message: message,
-    	            date: date
+    	            formatdate: date,
+                    fulldate: fulldate
     	        }, function() {
-    	            location.reload();
+                     location.reload();   
+                    
+                    // Temporary Solution
+                    //  I want only the message-list template to be updated/reloaded
+                    // And display an alertBox. alertbox();
+                    // $('.msg-list-content').empty().template('message-list', { messages: messages});
+
     	        });
     	    }		
     	});
@@ -28,7 +43,7 @@ class MessageForm {
 
     		var date = new Date();
     	    var monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-    	    var dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    	    var dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
     	    var month = monthNames[date.getMonth()];
     	    var dayName = dayNames[date.getDay()];
@@ -40,6 +55,10 @@ class MessageForm {
 
         	return niceFormat;
     	}
+
+        function alertbox() {
+            $('.alert-success').show().fadeOut(3000);
+        }
 
     }
 }

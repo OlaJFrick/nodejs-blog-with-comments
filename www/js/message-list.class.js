@@ -8,6 +8,8 @@ class MessageList {
 
         	$('.msg-list-content').template('message-list', { messages: messages});
 
+        	$('.alert-success').hide();
+
         	$('.list-group-item').toggleClass('animated fadeinDown');
 
         }
