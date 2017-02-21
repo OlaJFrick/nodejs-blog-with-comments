@@ -10,6 +10,5 @@ class MainPage {
 		function makeJello(element){
 			$(element).toggleClass('animated jello');
 		}
-
 	}
 }

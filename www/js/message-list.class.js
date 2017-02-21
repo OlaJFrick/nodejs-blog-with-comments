@@ -7,6 +7,9 @@ class MessageList {
         function getMessages(messages, err) {
 
         	$('.msg-list-content').template('message-list', { messages: messages});
+
+        	$('.list-group-item').toggleClass('animated fadeinDown');
+
         }
     }
 }
