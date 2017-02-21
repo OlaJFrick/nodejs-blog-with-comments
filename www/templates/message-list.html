@@ -2,14 +2,18 @@
     <div class='col-xs-12'>
         <div class="list-group">
 
+        [repeat messages,message]
+
             <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-between">
-                    <h5 class="msg-title">List group item heading</h5>
+                    <h5 class="msg-title">${message.title}</h5>
                     <small class="msg-date-count">3 days ago</small>
                 </div>
-                <p class="msg-message">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                <small class="msg-date">Donec id elit non mi porta.</small>
+                <p class="msg-message">${message.message}</p>
+                <small class="msg-date">${message.date} by ${message.username}</small>
             </a>
+
+            [endrepeat]
         </div>
     </div>
 </div>
