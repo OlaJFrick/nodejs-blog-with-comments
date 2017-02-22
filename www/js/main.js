@@ -1,5 +1,6 @@
 // The RestEntity classes here
 var Message = new RestEntity('message');
+var Blog = new RestEntity('blog');
 
 (()=>{
 	$.loadTemplates([
@@ -13,5 +14,4 @@ var Message = new RestEntity('message');
 		new MessageList();
 		new MessageForm();
 	}
-
 })();

@@ -7,6 +7,7 @@ require('mongoosefromclass')(mongoose);
 
 // Fake JSON Data
 var messageData = require('./messageData.json');
+var blogData = require('./blogData.json');
 
 // Make mongoose global
 global.mongoose = mongoose;
@@ -20,7 +21,8 @@ var classesToLoad = {
 	Restrouter: true,
 	Lesswatch: true,
 	MsgTest: true,
-	Message: 'module'
+	Message: 'module', 
+	Blog: 'module'
 };
 
 for(let className in classesToLoad) {
@@ -57,6 +59,7 @@ app.use((req, res, next)=>{
 
 // Create restroutes to selected classes/mongoose models
 new Restrouter(app, Message);
+new Restrouter(app, Blog);
 
 app.use(express.static('www'));
 
@@ -78,10 +81,22 @@ function onceConnected() {
     		createDefaultMessages();
     	}
     });
+
+    Blog.count(function(err, count) {
+    	if (count === 0) {
+    		createDefaultBlog();
+    	}
+    });
 }
 
 function createDefaultMessages() {
     messageData.forEach(function(data) {
         new Message(data).save();
+    });
+}
+
+function createDefaultBlog() {
+    blogData.forEach(function(data) {
+        new Blog(data).save();
     });
 }

@@ -15,6 +15,15 @@ body {
 
 .box-shadow { box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); };
 
+.custom-padded-boxes {
+	// .box-shadow;
+	border-radius: 4px;
+	padding: 20px;
+	opacity: 0.8;
+	border: 0;
+	margin-bottom: 10px;
+}
+
 @custom-color-main: #9E9E9E;
 @custom-color-50: #FAFAFA;
 @custom-color-100:#F5F5F5;
@@ -29,6 +38,8 @@ body {
 
 /////////////////////////////////////////////////////////////////////////////////////
 
+a { color: @custom-color-100;};
+
 .main-page-content {
 
 	.main-logo {
@@ -37,16 +48,51 @@ body {
 		margin: 10px auto;
 	}
 	
+	.custom-padded-boxes;
+
+	.blog-main {
+		background: @custom-color-900;
+
+		.blog-post {
+
+			img {
+				padding-top: 14px;
+				max-width: 100%;
+			}
+		}
+
+	}
+
+	.sidebar-module {
+		.custom-padded-boxes;
+		background: @custom-color-700;
+		color: @custom-color-100;
+	}
+	
 }
+
+// blog-main">
+//             <div class="blog-post">
+//                 <h2 class="blog-post-title">Sample blog post</h2>
+//                 <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
+//                 <p>This blog post shows a few different types of content that's supported and styled with Bootstrap. Basic typography, images, and code are all supported.</p>
+//                 <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
+//                 <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+//                 <p>Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.</p>
+//             </div>
 
 
 .msg-form-content {
 
 	form {
-		border-radius: 4px;
-		padding: 20px;
+		.custom-padded-boxes;
 		background: @custom-color-900;
-		opacity: 0.8;
+
+		// border-radius: 4px;
+		// padding: 20px;
+		// background: @custom-color-900;
+		// opacity: 0.8;
+
 	}
 }
 
@@ -61,12 +107,8 @@ body {
 	.list-group {
 		
 		.list-group-item {
-			.box-shadow;
-			border: 0;
+			.custom-padded-boxes;
 			background: @custom-color-900;
-			cursor: default;
-			margin-bottom: 10px;
-			padding: 30px;
 
 			.d-flex {
 

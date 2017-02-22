@@ -13,7 +13,7 @@ class MessageList {
 
         	$('.alert-success').hide();
 
-        	$('.list-group-item').toggleClass('animated fadeinDown');
+        	// $('.list-group-item').toggleClass('animated fadeinDown');
 
         }
     }
